@@ -113,11 +113,15 @@ blockquote p:after {
   width: 580px;
 }
 
-.vframe {git 
+.vframe {git
   width: 600px;
   height: 338px;
 }
 
 #welcome p {
   font-size: 20px;
+}
+
+.hidden {
+  display: none;
 }

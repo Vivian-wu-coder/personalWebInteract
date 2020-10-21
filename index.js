@@ -61,7 +61,7 @@
   }
 
   function submitQuote(e) {
-    alert("Thank you!");
+    findElementById("tyWords").classList.remove("hidden");
   }
 
   function findElementById(idName) {
