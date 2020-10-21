@@ -18,8 +18,10 @@
     findElementById("moreClasses").addEventListener("click", clickOnMoreClasses);
 
     findElementById("quoteWords").addEventListener("dragstart", function(event) {dragQuoteWords(event)});
-    findElementById("quotePosition").addEventListener("drop", function(event) {dropOnQuotePosition(event)})
-    findElementById("quotePosition").addEventListener("dragover", function(event) {allowDropOnQuotePosition(event)})
+    findElementById("quotePosition").addEventListener("drop", function(event) {dropOnQuotePosition(event)});
+    findElementById("quotePosition").addEventListener("dragover", function(event) {allowDropOnQuotePosition(event)});
+
+    findElementById("sendWords").addEventListener("click", submitQuote);
   }
 
   function welcomeWord() {
@@ -56,6 +58,10 @@
 
   function allowDropOnQuotePosition(e) {
     e.preventDefault();
+  }
+
+  function submitQuote(e) {
+    alert("Thank you!");
   }
 
   function findElementById(idName) {
