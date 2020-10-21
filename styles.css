@@ -1,0 +1,123 @@
+/*
+  Name: Vivian Wu
+  October 4, 2020
+  AB/Justin
+
+  this is the css file for about.html and videochannel.html
+*/
+
+body {
+  background-color: whitesmoke;
+  font-family: "Helvetica", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+h1, h2, h3 {
+  color: orange;
+}
+
+section#intro, #favoritething, section#happysad {
+  display: flex;
+}
+
+section#intro p {
+  font-size: 14pt;
+  margin-top: 200px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 200px;
+}
+
+#profile {
+  width: 30%;
+  box-shadow: inset;
+  margin-right: 90px;
+}
+
+#contact, #classes, #favoritething, blockquote {
+  margin-bottom: 50px;
+}
+
+#contact {
+  margin-top: 10px;
+  margin-left: 10%;
+}
+
+.socialiamge {
+  width: 3%;
+  height: auto;
+}
+
+a, #favoritething a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#classes {
+  color: rgb(112, 111, 109);
+  font-style: italic;
+  padding: 15px;
+}
+
+#favoritething a {
+  margin: 20px;
+}
+
+.favorpic {
+  width: 250px;
+  height: 250px;
+}
+
+.hsimage {
+  width: 400px;
+}
+
+section#happysad p {
+  max-width: 230px;
+  background: rgb(211, 211, 211);
+}
+
+section#sad {
+  margin-left: 60px;
+}
+
+blockquote {
+  width: 40%;
+}
+
+blockquote p {
+  padding: 14px;
+  background: #eee;
+  border-radius: 5px;
+  font-family: cursive;
+  font-size: 17px;
+}
+
+blockquote p:before {
+  content: '\201C';
+  font-size: 18px;
+}
+
+blockquote p:after {
+  content: '\201D';
+  font-size: 19px;
+}
+
+.playlist p, #welcome p {
+  line-height: 1.5;
+}
+
+.playlist p {
+  width: 580px;
+}
+
+.vframe {git 
+  width: 600px;
+  height: 338px;
+}
+
+#welcome p {
+  font-size: 20px;
+}
