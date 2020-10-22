@@ -97,7 +97,6 @@
   /**
    * Replace the favorite with the input words.
    */
-  func
   function replaceQuote() {
     let quoteWords = findElementById("quoteWords");
     let enterWords = findElementById("enterWords");

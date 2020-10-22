@@ -30,8 +30,23 @@ section#intro p {
   margin-bottom: 200px;
 }
 
+#profileButton {
+  background-color: orange;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
 #profile {
   width: 30%;
+  height: 30%;
+  max-width: 50%;
+  max-height: 50%;
   box-shadow: inset;
   margin-right: 90px;
 }
@@ -41,7 +56,6 @@ section#intro p {
 }
 
 #contact {
-  margin-top: 10px;
   margin-left: 10%;
 }
 
@@ -113,7 +127,7 @@ blockquote p:after {
   width: 580px;
 }
 
-.vframe {git
+.vframe {
   width: 600px;
   height: 338px;
 }
@@ -124,4 +138,29 @@ blockquote p:after {
 
 .hidden {
   display: none;
+  color: orange;
+  font-size: medium;
+}
+
+#sendWords {
+  background-color: orange;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+#enterWords {
+  width: 50%;
+  height: 100px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
 }
