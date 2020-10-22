@@ -67,10 +67,10 @@
   }
 
   /**
-  * The action happening to the dropon event on the quote position
-  * @param {event} event - The event
-  *
-  */
+   * The action happening to the dropon event on the quote position
+   * @param {event} event - The event
+   *
+   */
   function dropOnQuotePosition(event) {
     event.preventDefault();
     let quoteWords = event.dataTransfer.getData("QuoteWords");
