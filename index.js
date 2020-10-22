@@ -5,27 +5,32 @@
     "CSE 154: Web Programing",
     "COMMLD 517: The Psychology Of User Experience",
     "COMMLD 534: Visual Storytelling"
-  ]
+  ];
 
   window.addEventListener("load", init);
 
+  /**
+   * Init function to bind action to event of element
+   *
+   */
   function init() {
-    welcomeWord();
+    let profileButton = findElementById("profilebutton");
 
-    let profileButton = findElementById("profileButton");
     profileButton.addEventListener("click", profileButtonClick);
 
-    findElementById("moreClasses").addEventListener("click", clickOnMoreClasses);
+    findElementById("moreclasses").addEventListener("click", clickOnMoreClasses);
 
-    findElementById("quoteWords").addEventListener("dragstart", function(event) {dragQuoteWords(event)});
-    findElementById("quotePosition").addEventListener("drop", function(event) {dropOnQuotePosition(event)});
-    findElementById("quotePosition").addEventListener("dragover", function(event) {allowDropOnQuotePosition(event)});
+    findElementById("quotewords").addEventListener("dragstart", function(event) {
+      dragQuoteWords(event);
+    });
+    findElementById("quoteposition").addEventListener("drop", function(event) {
+      dropOnQuotePosition(event);
+    });
+    findElementById("quoteposition").addEventListener("dragover", function(event) {
+      allowDropOnQuotePosition(event);
+    });
 
-    findElementById("sendWords").addEventListener("click", submitQuote);
-  }
-
-  function welcomeWord() {
-    console.log("Welcome to Vivian's profile :)")
+    findElementById("sendwords").addEventListener("click", submitQuote);
   }
 
   /**
@@ -33,8 +38,8 @@
    *
    */
   function profileButtonClick() {
-    console.log("click on the button")
-    findElementById("profileButton").innerHTML = "<a href=\"videochannel.html\">Video Channel</a>"
+    console.log("click on the button");
+    findElementById("profilebutton").innerHTML = "<a href=\"videochannel.html\">Video Channel</a>";
   }
 
   /**
@@ -42,14 +47,14 @@
    *
    */
   function clickOnMoreClasses() {
-    console.log("click on the more classes")
+    console.log("click on the more classes");
     let classesElement = findElementById("classes");
     for (let i = 0; i < CLASSES_LIST.length; i++) {
       let newClassElement = generateElement("li");
       newClassElement.textContent = CLASSES_LIST[i];
       classesElement.appendChild(newClassElement);
     }
-    findElementById("moreClasses").remove();
+    findElementById("moreclasses").remove();
   }
 
   /**
@@ -70,8 +75,8 @@
   function dropOnQuotePosition(e) {
     console.log("start dropping on");
     e.preventDefault();
-    let quoteWords=e.dataTransfer.getData("QuoteWords");
-    e.target.parentNode.replaceChild(document.getElementById(quoteWords), findElementById("quotePosition"));
+    let quoteWords = e.dataTransfer.getData("QuoteWords");
+    e.target.parentNode.replaceChild(document.getElementById(quoteWords), findElementById("quoteposition"));
   }
 
   /**
@@ -88,7 +93,7 @@
    * @param {event} e - The event
    *
    */
-  function submitQuote(e) {
+  function submitQuote() {
     findElementById("tyWords").classList.remove("hidden");
 
     setTimeout(replaceQuote, 1000);
@@ -98,8 +103,8 @@
    * Replace the favorite with the input words.
    */
   function replaceQuote() {
-    let quoteWords = findElementById("quoteWords");
-    let enterWords = findElementById("enterWords");
+    let quoteWords = findElementById("quotewords");
+    let enterWords = findElementById("enterwords");
     quoteWords.textContent = enterWords.value;
   }
 
@@ -121,5 +126,3 @@
     return document.createElement(tagName);
   }
 })();
-
-

@@ -30,7 +30,7 @@ section#intro p {
   margin-bottom: 200px;
 }
 
-#profileButton {
+#profilebutton {
   background-color: orange;
   border: none;
   color: white;
@@ -142,7 +142,7 @@ blockquote p:after {
   font-size: medium;
 }
 
-#sendWords {
+#sendwords {
   background-color: orange;
   border: none;
   color: white;
@@ -154,7 +154,7 @@ blockquote p:after {
   margin-left: 10px;
 }
 
-#enterWords {
+#enterwords {
   width: 50%;
   height: 100px;
   padding: 12px 20px;
