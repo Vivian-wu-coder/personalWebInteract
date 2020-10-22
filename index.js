@@ -7,6 +7,8 @@
     "COMMLD 534: Visual Storytelling"
   ];
 
+  const DELAY_TIME = 1000;
+
   window.addEventListener("load", init);
 
   /**
@@ -38,7 +40,6 @@
    *
    */
   function profileButtonClick() {
-    console.log("click on the button");
     findElementById("profilebutton").innerHTML = "<a href=\"videochannel.html\">Video Channel</a>";
   }
 
@@ -47,7 +48,6 @@
    *
    */
   function clickOnMoreClasses() {
-    console.log("click on the more classes");
     let classesElement = findElementById("classes");
     for (let i = 0; i < CLASSES_LIST.length; i++) {
       let newClassElement = generateElement("li");
@@ -59,44 +59,42 @@
 
   /**
    * The action happening to the drag event on the quote words
-   * @param {event} e - The event
+   * @param {event} event - The event
    *
    */
-  function dragQuoteWords(e) {
-    console.log("start dragging");
-    e.dataTransfer.setData("QuoteWords", e.target.id);
+  function dragQuoteWords(event) {
+    event.dataTransfer.setData("QuoteWords", event.target.id);
   }
 
    /**
    * The action happening to the dropon event on the quote position
-   * @param {event} e - The event
+   * @param {event} event - The event
    *
    */
-  function dropOnQuotePosition(e) {
-    console.log("start dropping on");
-    e.preventDefault();
-    let quoteWords = e.dataTransfer.getData("QuoteWords");
-    e.target.parentNode.replaceChild(document.getElementById(quoteWords), findElementById("quoteposition"));
+  function dropOnQuotePosition(event) {
+    event.preventDefault();
+    let quoteWords = event.dataTransfer.getData("QuoteWords");
+    event.target.parentNode.replaceChild(document.getElementById(quoteWords),
+    findElementById("quoteposition"));
   }
 
   /**
    * The action to allow the DropOn event on the quote position
-   * @param {event} e - The event
+   * @param {event} event - The event
    *
    */
-  function allowDropOnQuotePosition(e) {
-    e.preventDefault();
+  function allowDropOnQuotePosition(event) {
+    event.preventDefault();
   }
 
   /**
    * The action while submitting quote.
-   * @param {event} e - The event
    *
    */
   function submitQuote() {
-    findElementById("tyWords").classList.remove("hidden");
+    findElementById("tywords").classList.remove("hidden");
 
-    setTimeout(replaceQuote, 1000);
+    setTimeout(replaceQuote, DELAY_TIME);
   }
 
   /**
