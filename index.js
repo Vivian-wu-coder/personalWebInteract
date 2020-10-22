@@ -66,16 +66,18 @@
     event.dataTransfer.setData("QuoteWords", event.target.id);
   }
 
-   /**
-   * The action happening to the dropon event on the quote position
-   * @param {event} event - The event
-   *
-   */
+  /**
+  * The action happening to the dropon event on the quote position
+  * @param {event} event - The event
+  *
+  */
   function dropOnQuotePosition(event) {
     event.preventDefault();
     let quoteWords = event.dataTransfer.getData("QuoteWords");
-    event.target.parentNode.replaceChild(document.getElementById(quoteWords),
-    findElementById("quoteposition"));
+    event.target.parentNode.replaceChild(
+      document.getElementById(quoteWords),
+      findElementById("quoteposition")
+    );
   }
 
   /**
